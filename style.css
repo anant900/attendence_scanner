@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Scanner</title>
+    <script src="https://unpkg.com/@zxing/library@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        video {
+            margin-top: 10px;
+            border: 3px solid #007BFF;
+            border-radius: 10px;
+        }
+        #attendanceList {
+            margin-top: 20px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            display: inline-block;
+            width: 50%;
+        }
+        li {
+            font-size: 16px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Attendance Scanner</h1>
+    <p>Click "Start Scanning" and hold a student ID in front of the camera.</p>
+
+    <video id="video" width="350" height="250"></video>
+    <button id="startScan">📷 Start Scanning</button>
+    <button id="downloadCSV">📥 Download Attendance</button>
+
+    <h2>Present Students (<span id="studentCount">0</span>)</h2>
+    <ul id="attendanceList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
