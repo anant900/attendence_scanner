@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Scanner</title>
+    <script src="https://cdn.jsdelivr.net/npm/@zxing/library@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Student Attendance Scanner</h1>
+    <video id="video" width="300" height="200"></video>
+    <button id="startScan">Start Scanning</button>
+    <button id="downloadCSV">Download Attendance</button>
+
+    <h2>Present Students</h2>
+    <ul id="attendanceList"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
